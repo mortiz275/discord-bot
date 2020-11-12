@@ -1,5 +1,6 @@
 import discord
 import random
+import os
 
 # COPY THIS FOR EVERY LINE
 #if message.content.lower().strip().startswith("$Lux")
@@ -77,4 +78,4 @@ async def on_message(message):
         
 
 
-client.run('TOKEN HERE')
+client.run(os.environ.get('BOT_TOKEN'))
