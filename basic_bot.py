@@ -24,7 +24,7 @@ async def on_message(message):
         await message.channel.send(random.choice(lolList))
             
     if message.content.lower().strip().startswith("$lons"):
-        await message.channel.send("Lons Bad")
+        await message.channel.send("Lons ~~Bad~~ Good :)")
 
     if message.content.lower().strip().startswith("$lonsgood"):
         await message.channel.send("Lons good???? https://streamable.com/tcq8xb")
