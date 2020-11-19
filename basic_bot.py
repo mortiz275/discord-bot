@@ -7,6 +7,7 @@ import os
 
 client= discord.Client()
 lolList= ["Time to grind League of Legends","Do not play League of Legends"]
+cj_toggle = True
 
 @client.event
 async def on_ready():
@@ -58,13 +59,17 @@ async def on_message(message):
 
     if message.content.lower().strip().startswith("$steak"):
         await message.channel.send("Its what's for dinner")
+        
+    if message.content.lower().strip().startswith("$cjtoggle") && (message.author.id == 456352346880999424 || message.author.id == 248273753782353928):
+        cj_toggle = !cj_toggle
+        await message.channel.send("CJ toggle is now: "+cj_toggle)
     
     if 'despacito' in message.content:
         await message.add_reaction('<:GRIEF:714226306996371476>')
         await message.add_reaction('<:sadyeehaw:728823509492695113>')
         await message.channel.send("This is so sad... Rythm play Despacito <:sadyeehaw:728823509492695113>")
 
-    if len(message.content)>=200:
+    if len(message.content)>=200 && cj_toggle:
         await message.channel.send("CJ Moment")
 
     if 'Takashi Kinomoto' in message.content:
