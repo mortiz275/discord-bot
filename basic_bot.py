@@ -7,7 +7,7 @@ import os
 
 client= discord.Client()
 lolList= ["Time to grind League of Legends","Do not play League of Legends"]
-cj_toggle = True
+global cj_toggle = True
 
 @client.event
 async def on_ready():
