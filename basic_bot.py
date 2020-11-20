@@ -8,11 +8,12 @@ import os
 client= discord.Client()
 lolList= ["Time to grind League of Legends","Do not play League of Legends"]
 global cj_toggle
-cj_toggle = True
+
 
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
+    cj_toggle = True
 
 @client.event
 async def on_message(message):
