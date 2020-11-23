@@ -77,6 +77,7 @@ async def on_message(message):
         
     if ':expressionless:' in message.content or '😑' in message.content:
         await message.delete()
+        await message.channel.send("Shut up takashi kimono :clown:")
 
     if len(message.content)>=200 and cj_toggle:
         await message.channel.send("CJ Moment")
