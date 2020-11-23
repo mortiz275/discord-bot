@@ -75,7 +75,7 @@ async def on_message(message):
         await message.add_reaction('<:sadyeehaw:728823509492695113>')
         await message.channel.send("This is so sad... Rythm play Despacito <:sadyeehaw:728823509492695113>")
         
-    if '😑' in message.content:
+    if ':expressionless:' in message.content or '😑' in message.content:
         await message.delete()
 
     if len(message.content)>=200 and cj_toggle:
