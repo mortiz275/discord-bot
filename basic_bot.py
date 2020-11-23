@@ -75,7 +75,7 @@ async def on_message(message):
         await message.add_reaction('<:sadyeehaw:728823509492695113>')
         await message.channel.send("This is so sad... Rythm play Despacito <:sadyeehaw:728823509492695113>")
         
-    if ':expressionless:' in message.content or '😑' in message.content:
+    if (message.author.id == 468230976317685795) and (':expressionless:' in message.content or '😑' in message.content):
         await message.delete()
         await message.channel.send("Shut up takashi kimono :clown:")
 
