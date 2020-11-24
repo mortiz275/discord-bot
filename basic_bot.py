@@ -7,7 +7,7 @@ import os
 
 client= discord.Client()
 lolList= ["Time to grind League of Legends","Do not play League of Legends"]
-takashi_list = ["😑", ":expressionless:", ":bread:", "-_-", ":unamused:", ":neutral_face:", ":"]
+takashi_list = ["-_-",":"]
 
 @client.event
 async def on_ready():
