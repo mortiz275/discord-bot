@@ -65,7 +65,7 @@ async def on_message(message):
         await message.channel.send("Its what's for dinner")
         
     if message.content.lower().strip().startswith("$debug"):
-        await message.channel.send('\`'+message.content+'\`')
+        await message.channel.send('`'+message.content+'`')
         
     if message.content.lower().strip().startswith("$cjtoggle") and (message.author.id == 456352346880999424 or message.author.id == 248273753782353928):
         cj_toggle = not(cj_toggle)
