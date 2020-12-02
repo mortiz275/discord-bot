@@ -66,7 +66,7 @@ async def on_message(message):
         await message.channel.send("Its what's for dinner")
         
     if message.content.lower().strip().startswith("$debug2"):
-        message.channel.send(str(any(i in message.content for i in UNICODE_EMOJI)))
+        await message.channel.send(str(any(i in message.content for i in UNICODE_EMOJI)))
     elif message.content.lower().strip().startswith("$debug"):
         await message.channel.send('`'+message.content+'`')
         print(message.content)
