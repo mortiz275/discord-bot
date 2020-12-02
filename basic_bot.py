@@ -65,9 +65,12 @@ async def on_message(message):
     if message.content.lower().strip().startswith("$steak"):
         await message.channel.send("Its what's for dinner")
         
-    if message.content.lower().strip().startswith("$debug"):
+    if message.content.lower().strip().startswith("$debug2"):
+        message.channel.send(str(any(i in message.content for i in UNICODE_EMOJI)))
+    elif message.content.lower().strip().startswith("$debug"):
         await message.channel.send('`'+message.content+'`')
         print(message.content)
+    
         
     if message.content.lower().strip().startswith("$cjtoggle") and (message.author.id == 456352346880999424 or message.author.id == 248273753782353928):
         cj_toggle = not(cj_toggle)
