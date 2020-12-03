@@ -8,7 +8,7 @@ from emoji import UNICODE_EMOJI
 
 client= discord.Client()
 lolList= ["Time to grind League of Legends","Do not play League of Legends"]
-takashi_list = ["-_-",":"]
+TAKASHI_LIST = ["-_-",":"]
 
 @client.event
 async def on_ready():
@@ -81,7 +81,7 @@ async def on_message(message):
         await message.add_reaction('<:sadyeehaw:728823509492695113>')
         await message.channel.send("This is so sad... Rythm play Despacito <:sadyeehaw:728823509492695113>")
         
-    if (message.author.id == 468230976317685795) and any(i in message.content for i in UNICODE_EMOJI):
+    if (message.author.id == 468230976317685795) and (any(i in message.content for i in UNICODE_EMOJI) or any(i in message.content for i in TAKASHI_LIST)):
         await message.delete()
         await message.channel.send("Shut up takashi kimono :clown:")
 
