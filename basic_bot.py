@@ -84,6 +84,10 @@ async def on_message(message):
     if (message.author.id == 468230976317685795) and (any(i in message.content for i in UNICODE_EMOJI) or any(i in message.content for i in TAKASHI_LIST)):
         await message.delete()
         await message.channel.send("Shut up takashi kimono :clown:")
+        
+    if(message.author.id==352623344660643841) and (message.content= "horny"):
+        await message.delete()
+        await message.channel.send("No horny in general")
 
     if len(message.content)>=200 and cj_toggle:
         await message.channel.send("CJ Moment")
